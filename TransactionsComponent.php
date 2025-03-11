@@ -10,11 +10,11 @@ class TransactionsComponent extends BaseComponent
 {
     use DynamicTable;
 
-    protected $accountsTransactionsPackage;
+    protected $mfTransactionsPackage;
 
     public function initialize()
     {
-        $this->accountsTransactionsPackage = $this->usePackage(MfTransactions::class);
+        $this->mfTransactionsPackage = $this->usePackage(MfTransactions::class);
     }
 
     /**
@@ -24,7 +24,7 @@ class TransactionsComponent extends BaseComponent
     {
         if (isset($this->getData()['id'])) {
             if ($this->getData()['id'] != 0) {
-                $transaction = $this->accountsTransactionsPackage->getById((int) $this->getData()['id']);
+                $transaction = $this->mfTransactionsPackage->getById((int) $this->getData()['id']);
 
                 if (!$transaction) {
                     return $this->throwIdNotFound();
@@ -43,8 +43,8 @@ class TransactionsComponent extends BaseComponent
                 // 'disableActionsForIds'  => [1],
                 'actionsToEnable'       =>
                 [
-                    'edit'      => 'accounts/transactions',
-                    'remove'    => 'accounts/transactions/remove'
+                    'edit'      => 'mf/transactions',
+                    'remove'    => 'mf/transactions/remove'
                 ]
             ];
 
@@ -54,8 +54,8 @@ class TransactionsComponent extends BaseComponent
             ];
 
         $this->generateDTContent(
-            $this->accountsTransactionsPackage,
-            'accounts/transactions/view',
+            $this->mfTransactionsPackage,
+            'mf/transactions/view',
             $conditions,
             ['date', 'amount', 'type', 'user_id', 'portfolio_id'],
             true,
