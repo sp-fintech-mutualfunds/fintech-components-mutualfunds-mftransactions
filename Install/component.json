@@ -1,7 +1,7 @@
 {
 	"name" : "Mutual Fund Transactions",
 	"route" : "mf/transactions",
-	"description" : "<p>List transactions for Mutual Funds via this component</p>",
+	"description" : "<p>Mutual Fund Transactions</p>",
 	"module_type" : "components",
 	"app_type" : "fintech",
 	"category" : "mutualfunds",
@@ -27,7 +27,7 @@
 			{
 				"name" : "MfTransactions",
 				"version" : "0.0.0",
-				"repo" : "https://github.com/sp-fintech/fintech-packages-mutualfunds-mftransactions"
+				"repo" : "https://github.com/sp-fintech-mutualfunds/fintech-packages-mutualfunds-mftransactions"
 			}
 		],
 		"middlewares" : [],
