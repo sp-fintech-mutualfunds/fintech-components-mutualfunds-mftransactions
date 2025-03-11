@@ -2,8 +2,8 @@
 
 namespace Apps\Fintech\Components\Mf\Transactions;
 
-use Apps\Fintech\Packages\Accounts\Transactions\AccountsTransactions;
 use Apps\Fintech\Packages\Adminltetags\Traits\DynamicTable;
+use Apps\Fintech\Packages\Mf\Transactions\MfTransactions;
 use System\Base\BaseComponent;
 
 class TransactionsComponent extends BaseComponent
@@ -14,7 +14,7 @@ class TransactionsComponent extends BaseComponent
 
     public function initialize()
     {
-        $this->accountsTransactionsPackage = $this->usePackage(AccountsTransactions::class);
+        $this->accountsTransactionsPackage = $this->usePackage(MfTransactions::class);
     }
 
     /**
