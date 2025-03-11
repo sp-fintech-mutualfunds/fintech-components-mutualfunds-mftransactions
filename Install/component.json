@@ -1,0 +1,75 @@
+{
+	"name" : "Mutual Fund Transactions",
+	"route" : "mf/transactions",
+	"description" : "<p>List transactions for Mutual Funds via this component</p>",
+	"module_type" : "components",
+	"app_type" : "fintech",
+	"category" : "mutualfunds",
+	"version" : "0.0.0",
+	"repo" : "https://github.com/sp-fintech-mutualfunds/fintech-components-mutualfunds-mftransactions",
+	"class" : "Apps\\Fintech\\Components\\Mf\\Transactions\\TransactionsComponent",
+	"dependencies" : 
+	{
+		"core" : 
+		{
+			"name" : "Core",
+			"version" : "0.0.0-rc.12",
+			"repo" : "https://github.com/sp-framework/core"
+		},
+		"apptype" : 
+		{
+			"name" : "Fintech",
+			"version" : "0.3.0",
+			"repo" : "https://github.com/sp-fintech/fintech"
+		},
+		"packages" : 
+		[
+			{
+				"name" : "MfTransactions",
+				"version" : "0.0.0",
+				"repo" : "https://github.com/sp-fintech/fintech-packages-mutualfunds-mftransactions"
+			}
+		],
+		"middlewares" : [],
+		"views" : [],
+		"externals" : 
+		{
+			"composer" : 
+			{
+				"require" : []
+			},
+			"config" : 
+			{
+				"allow-plugins" : []
+			},
+			"extra" : 
+			{
+				"patches" : []
+			}
+		}
+	},
+	"menu" : 
+	{
+		"mf" : 
+		{
+			"title" : "mf",
+			"icon" : "file-invoice-dollar",
+			"childs" : 
+			{
+				"transactions" : 
+				{
+					"title" : "transactions",
+					"icon" : "exchange-alt",
+					"link" : "mf/transactions"
+				}
+			}
+		},
+		"seq" : "0"
+	},
+	"settings" : 
+	{
+		"mandatory" : true,
+		"needAuth" : "mandatory"
+	},
+	"widgets" : []
+}
