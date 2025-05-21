@@ -76,11 +76,12 @@ class TransactionsComponent extends BaseComponent
     {
         $this->requestIsPost();
 
-        //$this->package->add{?}($this->postData());
+        $this->mfTransactionsPackage->addMfTransaction($this->postData());
 
         $this->addResponse(
-            $this->package->packagesData->responseMessage,
-            $this->package->packagesData->responseCode
+            $this->mfTransactionsPackage->packagesData->responseMessage,
+            $this->mfTransactionsPackage->packagesData->responseCode,
+            $this->mfTransactionsPackage->packagesData->responseData ?? []
         );
     }
 
@@ -91,11 +92,12 @@ class TransactionsComponent extends BaseComponent
     {
         $this->requestIsPost();
 
-        //$this->package->update{?}($this->postData());
+        $this->mfTransactionsPackage->updateMfTransaction($this->postData());
 
         $this->addResponse(
-            $this->package->packagesData->responseMessage,
-            $this->package->packagesData->responseCode
+            $this->mfTransactionsPackage->packagesData->responseMessage,
+            $this->mfTransactionsPackage->packagesData->responseCode,
+            $this->mfTransactionsPackage->packagesData->responseData ?? []
         );
     }
 
@@ -106,11 +108,12 @@ class TransactionsComponent extends BaseComponent
     {
         $this->requestIsPost();
 
-        //$this->package->remove{?}($this->postData());
+        $this->mfTransactionsPackage->removeMfTransaction($this->postData());
 
         $this->addResponse(
-            $this->package->packagesData->responseMessage,
-            $this->package->packagesData->responseCode
+            $this->mfTransactionsPackage->packagesData->responseMessage,
+            $this->mfTransactionsPackage->packagesData->responseCode,
+            $this->mfTransactionsPackage->packagesData->responseData ?? []
         );
     }
 }
