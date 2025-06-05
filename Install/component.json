@@ -48,24 +48,7 @@
 			}
 		}
 	},
-	"menu" : 
-	{
-		"mf" : 
-		{
-			"title" : "mf",
-			"icon" : "file-invoice-dollar",
-			"childs" : 
-			{
-				"transactions" : 
-				{
-					"title" : "transactions",
-					"icon" : "exchange-alt",
-					"link" : "mf/transactions"
-				}
-			}
-		},
-		"seq" : "0"
-	},
+	"menu" : "false",
 	"settings" : 
 	{
 		"mandatory" : true,
